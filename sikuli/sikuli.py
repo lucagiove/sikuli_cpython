@@ -37,9 +37,7 @@ def findAll(target_string, *args, **kwargs):
     return screen.findAll(target)
 
 
-def wait(target_string, *args, **kwargs):
-    if not duration and duration != 0:
-        duration = 5000
+def wait(target_string, duration=5000, *args, **kwargs):
     target = Pattern(target_string).getTarget()
     screen = DesktopScreenRegion()
     return screen.wait(target, duration)
